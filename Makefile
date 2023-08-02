@@ -11,7 +11,7 @@ BUILDHOST := $(patsubst CYGWIN_%,CYGWIN,$(BUILDHOST))
 
 ifneq ($(BUILDHOST),CYGWIN)
 PKG_CONFIG ?= pkg-config
-USBCFLAGS = `$(PKG_CONFIG) --cflags libusb-1.0`
+USBCFLAGS = `$(PKG_CONFIG) --cflags libusb-1.1`
 USBLDFLAGS = `$(PKG_CONFIG) --libs libusb-1.0`
 else
 USBCFLAGS = -I/usr/include/libusb-1.0
